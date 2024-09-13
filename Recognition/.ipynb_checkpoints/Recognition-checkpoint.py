@@ -58,7 +58,7 @@ print("Test loss:", score[0])
 print("Test accuracy:", score[1])
 
 # 預測(prediction)
-mfcc = wav2mfcc(r"C:\Users\王天佑\Desktop\1-002.wav",15)
+mfcc = wav2mfcc('../Recognition/try1money.wav',15)
 mfcc_reshaped = mfcc.reshape(1, 20, 15, 1)
 print("labels=0 is mean 1 dollarmoney ,1 is mean 10 dollar money ,2 is mean 50dollar money")
 print("predict=", np.argmax(model.predict(mfcc_reshaped)))
